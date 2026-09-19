@@ -90,8 +90,6 @@ function pino (...args) {
   const instance = {}
   const { opts, stream } = normalize(instance, caller(), ...args)
 
-  if (opts.level && typeof opts.level === 'string' && DEFAULT_LEVELS[opts.level.toLowerCase()] !== undefined) opts.level = opts.level.toLowerCase()
-
   const {
     redact,
     crlf,
